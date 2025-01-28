@@ -12,6 +12,7 @@ class CreateRelationshipsTable extends Migration
     public function up(): void
     {
         Schema::create('relationships', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('created_by'); 
             $table->unsignedBigInteger('parent_id');
             $table->unsignedBigInteger('child_id');
